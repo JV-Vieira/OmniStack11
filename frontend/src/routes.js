@@ -6,20 +6,16 @@ import Register from './pages/Register';
 import Profile from './pages/Profile';
 import NewIncident from './pages/NewIncident';
 
-
-function Routes() {
+export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        {/* path é o caminho que vai acessar a rota */}
         <Route path="/" exact component={Logon} />
         <Route path="/register" component={Register} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/incident/new" component={NewIncident} />
 
+        <Route path="/profile" component={Profile} />
+        <Route path="/incidents/new" component={NewIncident} />
       </Switch>
     </BrowserRouter>
   );
 }
-
-export default Routes;
